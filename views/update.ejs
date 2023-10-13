@@ -1,0 +1,13 @@
+<% include ./partials/header.ejs %>
+
+        <div class="container" style="height: 350px; width: 300px; margin: 100px 500px; border: 1px solid grey; border-radius: 20px;background: linear-gradient(rgb(235, 168, 114),rgb(240, 214, 157), rgb(127, 211, 200))  ">
+        <h3 style="margin: 20px 40px;">Update Your Details</h3>
+            <form action="/update/<%= user._id %>" method="post">
+            <input type="text" placeholder="username" name="username" value="<%= user.username %>" style="margin-left: 50px; margin-top: 20px;"><br>
+            <input type="text" placeholder="email" name="email" value="<%= user.email %>" style="margin-left: 50px; margin-top: 20px;"><br>
+            <input type="password" placeholder="password" name="password" disabled style="margin-left: 50px; margin-top: 20px;"><br>
+             <input type="submit" value="Update" style="margin-left: 50px; margin-top: 20px; margin-bottom: 20px;">
+           </form>
+           <!-- <a href="/signin">Already have an account?</a> -->
+          
+           <% include ./partials/footer.ejs %>

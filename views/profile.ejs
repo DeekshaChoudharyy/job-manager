@@ -1,0 +1,32 @@
+<% include ./partials/header.ejs %>
+  
+<div class="profile">
+    <div class="lpro" style="width: 1500px; height: 600px;">
+        <h3 style="margin-top: 40px; margin-left: 15px;">List of Selected Candidates</h3>
+
+<ol class="w-50 mt-5 ms-3">
+     
+    <ul class="list-group list-group-numbered w-50" style="display: flex; justify-content: space-between;">
+        <% users.forEach((user) => { %>
+          <li class="list-group-item"><%= user.username %>
+            <span>
+                <a class="text-decoration-none" href="/update/<%= user._id%>">🖊</a>
+                <a class="text-decoration-none" href="/delete/<%= user._id%>">❌</a>
+                <a class="text-decoration-none" href="/reset/<%= user._id%>">😣</a>
+            </span>
+
+          </li>
+        <%})%>
+    </ul>
+
+   
+  </ol>
+    </div>
+    
+    </div>
+
+</div>
+
+
+
+ <% include ./partials/footer.ejs %>
